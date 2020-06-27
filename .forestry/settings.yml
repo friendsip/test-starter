@@ -6,20 +6,6 @@ webhook_url:
 sections:
 - type: directory
   path: ''
-  label: People
-  create: all
-  match: "**/*"
-  templates:
-  - post
-- type: directory
-  path: ''
-  label: Technology
-  create: all
-  match: "**/*"
-  templates:
-  - post
-- type: directory
-  path: ''
   label: About Us
   create: all
   match: "**/*"
@@ -67,7 +53,7 @@ build:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.70.0
   preview_output_directory: public
-  preview_docker_image: forestryio/hugo:latest
+  preview_docker_image: forestryio/hugo:node12
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
