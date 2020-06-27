@@ -4,18 +4,44 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: ''
+  label: People
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: ''
+  label: Technology
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: ''
+  label: About Us
+  create: all
+  match: "**/*"
+  templates:
+  - home
+- type: directory
+  path: Specsavers
+  label: Stories
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/post
+  label: Blog
+  create: all
+  match: "**/*"
+  templates:
+  - post
 - type: heading
   label: Content
 - type: document
   path: content/_index.md
   label: Home
-- type: directory
-  path: content/post
-  label: Posts
-  create: all
-  match: "**/*"
-  templates:
-  - post
 - type: heading
   label: Data
 - type: directory
